@@ -1,4 +1,4 @@
-const footballTeams = {
+const footballTeams = {  // Creating a object containing all teams, with there mvp players and names. Date of writing Jan/2022
 
     'Real Madrid': {
 
@@ -72,11 +72,13 @@ const footballTeams = {
 
 };
 
+// Array that will cotain all teams for easier access.
 
 const allTeams = [footballTeams['Real Madrid'], footballTeams['Barca'], footballTeams['Atletico'], footballTeams['Manchester'], footballTeams['Liverpool'], footballTeams['Chelsea'], footballTeams['PSG'], footballTeams['Internazionale'], footballTeams['Juventus'], footballTeams['Bayern']];
 
 
-const randTeams = arr => {
+
+const randTeams = arr => {// Chooses  2 random teams from the array and stores them in a new array
 
     let gameTeams = [];
     let randNum1 = Math.floor(Math.random() * arr.length);
@@ -93,7 +95,7 @@ const randTeams = arr => {
 
 
 
-const randomPlayers = arr => {
+const randomPlayers = arr => { // Chooses two random players from the passed arrays
 
     const pPlayers = [];
     let randNum1 = Math.floor(Math.random() * arr[0].players.length);
@@ -106,17 +108,19 @@ const randomPlayers = arr => {
 }
 
 
-const winner = arr => {
+const winner = arr => { //Chooses a random amount of goals and assigns it to one of the two teams. 
 
     const bothTeams = [arr[0].name, arr[1].name];
     const goals1 = Math.floor((Math.random() * 5) + 1);
     const goals2 = Math.floor((Math.random() * 5) + 1);
 
-    if(goals1 > goals2) return arr[0].name;
-    if(goals1 < goals2) return arr[1].name;
-    if(goals1 === goals2) return bothTeams;
+    if(goals1 > goals2) return arr[0].name; // If team 1 has more goals than team 2 then return that team.
+    if(goals1 < goals2) return arr[1].name; // Same as before.
+    if(goals1 === goals2) return bothTeams; // If both teams have the same amount of goals return both teams.
 
 };
+
+// Gives a score to both playes, the player with the most score wins.
 
 const bestPlayer = (arr) => {
 
@@ -128,17 +132,27 @@ const bestPlayer = (arr) => {
     if(overalScore1 < overalScore2) return arr[1];
 };
 
+// Calling all functions
 
-const teams = randTeams(allTeams);
-const possiblePlayers = randomPlayers(teams);
-const winnerTeam = winner(teams);
-const winnerPlayer = bestPlayer(possiblePlayers);
-const futureYear = Math.floor(Math.random() * 20) + 2022;
-const minute = Math.floor(Math.random() * 90);
 
-if(winnerTeam.length == 2){
-    console.log(`In the year ${futureYear}, the champions game will result in a draw between ${winnerTeam[0]} and ${winnerTeam[1]}, with the best play being from ${winnerPlayer} who scored in the minute ${minute}.`);
-}else {
+function genieMessage(){
 
-    console.log(`The winner of ${futureYear} champions game will be ${winnerTeam} with the best play being from ${winnerPlayer} who scored in the minute ${minute}.`);
+    const teams = randTeams(allTeams);
+    const possiblePlayers = randomPlayers(teams);
+    const winnerTeam = winner(teams);
+    const winnerPlayer = bestPlayer(possiblePlayers);
+    const futureYear = Math.floor(Math.random() * 20) + 2022;
+    const minute = Math.floor(Math.random() * 90);
+
+
+
+    if(winnerTeam.length == 2){
+        document.getElementById('pText').innerHTML = `In the year ${futureYear}, the champions game will result in a draw between ${winnerTeam[0]} and ${winnerTeam[1]}, with the best play being from ${winnerPlayer} who scored in the minute ${minute}.`;
+
+    }else {
+
+        document.getElementById('pText').innerHTML = `The winner of ${futureYear} champions game will be ${winnerTeam} with the best play being from ${winnerPlayer} who scored in the minute ${minute}.`
+        
+    }
+
 }
