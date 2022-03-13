@@ -1,0 +1,448 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html{
+  font-size: 16px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+/* HEADER */
+
+header{
+  background-color: white;
+  height: 85px;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+header .content{
+  display: flex;
+  align-items: center;
+  padding: 1.85rem;
+}
+nav ul{
+  display: flex;
+}
+
+.icon{
+  width: 1rem;
+  height: auto;
+}
+.desktop-logo{
+  font-size: 1.8em;
+  font-weight: bold;
+  flex: 1;
+}
+.banner{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center{
+  text-align: center;
+}
+
+
+/* CONTENT */
+
+.main-content{
+  background-color: rgba(218, 218, 218, 0.52);
+  font-family: "Roboto", sans-serif;
+  color: #4A4A4A;
+}
+
+.cursive{
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+}
+.striking{
+  font-size: 3.5rem;
+  font-family: "Rubik", sans-serif;
+}
+strong{
+  font-weight: bold;
+}
+
+/* features section */
+
+#features-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+#features-section .feature{
+  background-color: white;
+  width: 45rem;
+  padding: 2rem;
+  margin-top: 18px;
+}
+#features-section img{
+  width: 45rem;
+  height: auto;
+}
+#features-section .content{
+  line-height: 1.2;
+  margin-top: 2.5rem;
+}
+#features-section .content h2{
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+#features-section .content h3{
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+
+/* filters section */
+
+#filters-section{
+  background-color: rgb(68, 68, 68);
+  padding: 4rem 0px;
+  color: white;
+  line-height: 1.4;
+  margin-top: 46px;
+  overflow: hidden;
+}
+#filters-section .images-container{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+#filter .image-container{
+  overflow: hidden;
+}
+#filters-section img{
+  width: 25rem;
+  height: auto;
+}
+#filters-section h2{
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+#filters-section h3{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* quotes section */
+
+#quotes-section{
+  font-family: "Palatino";
+  font-style: italic;
+  font-size: 1.9rem;
+  margin: 80px 0px;
+  line-height: 1.4;
+}
+#quotes-section .quote-citation{
+  margin-left: 30px;
+  margin-top: 4px;
+}
+
+/* FOOTER */
+
+footer{
+  background-color: #797979ea;
+  color: white;
+  height: 62px;
+  padding: 1.5rem 2rem 0;
+  line-height: 1.4;
+}
+footer .content{
+  display: flex;
+}
+footer .copyright{
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 500px) { 
+
+  .desktop a{
+    display: none;
+  }
+
+  header{
+    background-color: rgb(255, 255, 255);
+    height: 85px;
+    width: 100%;
+  }
+  .button a{
+    background-color: #9DC20A;
+    color: #FFF;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    box-shadow: 0px 3px #7c902a;
+  }
+  .button a:active{
+    background-color: #81991f;
+    color: rgb(199, 199, 199);
+    box-shadow: 0px 1.5px rgb(32, 32, 32);
+  }
+
+  .mobile ul{
+    display: flex;
+    align-items: center;
+  }
+  .mobile ul li{
+    margin-right: 1.5rem;
+    font-size: 1.7rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+  }
+  .mobile img{
+    width: 2rem;
+    height: auto;
+  }
+  .desktop-logo{
+    display: none;
+  }
+  .email{
+    display: none;
+  }
+  #sign-up-cta{
+    position: relative;
+    top: 40%;
+    height: auto;
+    width: 100%;
+    padding: 2rem 3rem 2.5rem 4rem;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    background-color: #0000009f;
+    line-height: 1.15;
+  }
+  #features-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  #features-section .feature{
+    background-color: white;
+    width: 21rem;
+    padding: 0.8rem;
+    margin-top: 18px;
+  }
+  #features-section img{
+    width: 21rem;
+    height: auto;
+  }
+  #features-section .feature{
+    margin-top: 2px;
+  }
+
+  #filters-section{
+    padding: 2rem 0 0 0px;
+  }
+  #filters-section img{
+    width: 10rem;
+    height: auto;
+  }
+  #filters-section{
+    margin-top: 0;
+  }
+  footer{
+    font-size: 0.85rem;
+  }
+  
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  
+  .mobile img{
+    display: none;
+  }
+
+  #filters-section img{
+    width: 15rem;
+    height: auto;
+  }
+
+  /* BUTTONS */
+
+  .button a{
+    background-color: #9DC20A;
+    color: #FFF;
+    padding: 0.6rem 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0px 3px #7c902a;
+    font-size: 1.15em;
+  }
+  .button a:active{
+    background-color: #81991f;
+    color: rgb(199, 199, 199);
+    box-shadow: 0px 1.5px rgb(32, 32, 32);
+  }
+  .desktop ul li{
+    font-size: 1.15em;
+    padding-left: 1rem;
+    margin-right: 1rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: #4A4A4A;
+  }
+  .email{
+    display: none;
+  }
+  .header{
+    color: white;
+  }
+  #sign-up-cta{
+    position: relative;
+    top: 40%;
+    height: auto;
+    width: 100%;
+    padding: 0 5rem 2.5rem 5rem;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    background-color: #0000009f;
+  }
+  #sign-up-cta .content{
+    margin-top: 2rem;
+    line-height: 1.4;
+  }
+
+  #features-section .feature{
+    background-color: white;
+    width: 22rem;
+    padding: 0.8rem;
+    margin-top: 18px;
+  }
+  #features-section img{
+    width: 26rem;
+    height: auto;
+  }
+
+
+}
+
+
+@media only screen and (min-width:1025px){
+
+  .mobile{
+    display: none;
+  }
+  
+  #sign-up-cta{
+    position: relative;
+    top: 171px;
+    left: 10%;
+    padding: 0 5rem 2.5rem 5rem;
+    height: auto;
+    color: white;
+    background-color: #9DC20A;
+    border: solid 0.5px rgb(160, 152, 152);
+    border-radius: 12px;
+    font-size: 16px;
+  }
+
+  #sign-up-cta .content{
+    width: 25.625rem;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .striking{
+    font-size: 3.1rem;
+    font-family: "Rubik", sans-serif;
+  }
+
+  nav ul li{
+    font-size: 1em;
+    margin-right: 30px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: #4A4A4A;
+  }
+
+    /* BUTTONS */
+
+    .button{
+      padding: 0.8rem 0px;
+      margin-top: 1.625rem;
+      border-radius: 1rem;
+    }
+    .button a{
+      background-color: #4A4A4A;
+      color: #FFF;
+      padding: 0.8rem 5rem;
+      margin-top: 1rem;
+      border-radius: 1.25rem;
+      box-shadow: 0px 3px rgb(54, 54, 54);
+    }
+    .button a:hover{
+      background-color: #575757;
+      color: rgb(231, 231, 231);
+      box-shadow: 0px 3px rgb(51, 51, 51);
+    }
+    .button a:active{
+      background-color: #6e6e6e;
+      color: rgb(158, 158, 158);
+      box-shadow: 0px 1px rgb(32, 32, 32);
+      padding: 0.8rem 4.85rem;
+    }
+
+}
+
